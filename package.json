@@ -1,0 +1,32 @@
+{
+  "name": "frontend-testing-book-vrt-review",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
+    "storybook:serve": "npx http-server storybook-static -o -p 6006",
+    "vrt:snapshot": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
+    "vrt:expected": "rimraf .reg/expected && mv __screenshots__ .reg/expected",
+    "vrt:run": "reg-suit run",
+    "vrt:serve": "npx http-server .reg -o -p 8080"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^9.1.2",
+    "reg-keygen-git-hash-plugin": "^0.12.1",
+    "reg-notify-github-plugin": "^0.12.1",
+    "reg-publish-s3-plugin": "^0.12.1",
+    "reg-suit": "^0.12.1",
+    "storycap": "^4.0.0"
+  }
+}

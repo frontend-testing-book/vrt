@@ -1,0 +1,8 @@
+node_modules
+
+# reg
+.reg
+__screenshots__
+
+# storybook
+storybook-static
