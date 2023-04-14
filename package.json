@@ -5,8 +5,8 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
-    "storybook:serve": "npx http-server storybook-static -o -p 6006",
-    "vrt:snapshot": "storycap --serverCmd \"npx http-server storybook-static -p 6006\" http://localhost:6006",
+    "storybook:serve": "npx http-server storybook-static -a localhost -p 6006 -s",
+    "vrt:snapshot": "storycap --serverCmd \"npx http-server storybook-static -a localhost -p 6006\" http://localhost:6006",
     "vrt:expected": "rimraf .reg/expected && mv __screenshots__ .reg/expected",
     "vrt:run": "reg-suit run",
     "vrt:serve": "npx http-server .reg -o -p 8080"
