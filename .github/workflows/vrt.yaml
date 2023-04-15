@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0 # この指定がないと比較に失敗する
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@master
         with:
